@@ -13,13 +13,11 @@ import jakarta.validation.*;;
 import org.junit.jupiter.api.*;
 import java.util.Set;
 
-import java.util.Set;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-
 public class AppTest {
 
-    private  static Validator validator;
+
+
+    private static Validator validator;
     private Set<ConstraintViolation<Person>> violations;
 
     @BeforeAll
