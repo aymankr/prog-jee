@@ -1,11 +1,24 @@
 package fr.iut;
 
-public class Person {
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jdk.jfr.Name;
 
+public class Person {
+    @NotNull
+    @Email
     private String email;
+    @NotNull
     private String firstName;
+
+    @NotNull
     private String lastName;
+
+    @Login
+    @NotNull
     private String Login;
+
+    @NotNull
     private boolean isStudent;
 
 

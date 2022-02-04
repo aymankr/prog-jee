@@ -1,11 +1,20 @@
 package fr.iut;
 
+import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.URL;
+
 import java.util.List;
 
 public class Project {
 
+    @NotNull
     private String description;
+
+    @NotNull
     private String name;
+
+    @NotNull
+    @URL
     private String urlRepository;
 
     private List<Person> teachers;
