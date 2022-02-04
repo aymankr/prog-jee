@@ -102,9 +102,13 @@
                 </executions>
             </plugin>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> td1:add jacoco
+=======
+
+>>>>>>> 547c118d8f32df19f26d837eddb42ea74bc5eaf3
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
