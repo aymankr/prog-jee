@@ -101,6 +101,10 @@
                 </execution>
                 </executions>
             </plugin>
+<<<<<<< HEAD
+=======
+
+>>>>>>> td1:add jacoco
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
