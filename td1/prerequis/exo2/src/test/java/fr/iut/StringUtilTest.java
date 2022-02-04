@@ -10,7 +10,9 @@ public class StringUtilTest {
     @Test
     public void testPrettyCurrency() {
         String res = StringUtil.prettyCurrencyPrint(21500.390, Locale.FRANCE);
-        String n = NumberFormat.getCurrencyInstance(Locale.FRANCE).format(21500.390);
-        assertEquals(res, n);
+        assertEquals(res.replace("\u00a0", " "), "21 500,39 €");
+
+        String res2 = StringUtil.prettyCurrencyPrint(8889.390, Locale.FRANCE);
+        assertEquals(res2.replace("\u00a0", " "), "8 889,39 €");
     }
 }
