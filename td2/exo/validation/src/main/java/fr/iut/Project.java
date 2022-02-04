@@ -46,7 +46,7 @@ public class Project {
 
     public void setMesDocuments(List<Document> mesDocuments) {
         this.mesDocuments = mesDocuments;
-    }
+    }jakarta.validation</
 
     private List<Person> customers;
     private List<Document> mesDocuments;

@@ -1,17 +1,40 @@
 package fr.iut;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+
 import java.util.Date;
 
 public class Document {
 
+    @NotNull
     private String title;
-    private String Content;
-    private Date creationDate;
-    private String login;
-    private boolean isStudent;
 
+    @NotNull
+    private String Content;
+
+    @PastOrPresent
+    @NotNull
+    private Date creationDate;
+
+    @PastOrPresent
+    private Date lastModification;
+
+
+    @NotNull
     private Person creator;
     private Person lastModifier;
+
+
+
+    public Date getLastModification() {
+        return lastModification;
+    }
+
+    public void setLastModification(Date lastModification) {
+        this.lastModification = lastModification;
+    }
 
     public String getTitle() {
         return title;
@@ -35,22 +58,6 @@ public class Document {
 
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public boolean isStudent() {
-        return isStudent;
-    }
-
-    public void setStudent(boolean student) {
-        isStudent = student;
     }
 
     public Person getCreator() {

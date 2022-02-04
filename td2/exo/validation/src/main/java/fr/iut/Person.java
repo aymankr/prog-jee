@@ -2,8 +2,10 @@ package fr.iut;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
+import jdk.jfr.Name;
 
 public class Person {
+    @NotNull
     @Email
     private String email;
     @NotNull
