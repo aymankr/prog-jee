@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.URL;
 import java.util.List;
 
 public class Project {
+<<<<<<< HEAD
 
     @NotNull
     private String description;
@@ -38,6 +39,17 @@ public class Project {
     public void setUrlRepository(String urlRepository) {
         this.urlRepository = urlRepository;
     }
+=======
+    @NotNull
+    private String description;
+    @NotNull
+    private String name;
+    @NotNull
+    @URL
+    private String urlRepository;
+    private List<Person> teachers;
+    private List<Person> students;
+>>>>>>> 8048cac6d601e091fe80087693605c695b047d9a
 
     public List<Person> getTeachers() {
         return teachers;
@@ -71,6 +83,12 @@ public class Project {
         this.mesDocuments = mesDocuments;
     }
 
+<<<<<<< HEAD
+=======
+    private List<Person> customers;
+    private List<Document> mesDocuments;
+
+>>>>>>> 8048cac6d601e091fe80087693605c695b047d9a
     public String getDescription() {
         return description;
     }
@@ -78,4 +96,23 @@ public class Project {
     public void setDescription(String description) {
         this.description = description;
     }
+<<<<<<< HEAD
+=======
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUrlRepository() {
+        return urlRepository;
+    }
+
+    public void setUrlRepository(String urlRepository) {
+        this.urlRepository = urlRepository;
+    }
+>>>>>>> 8048cac6d601e091fe80087693605c695b047d9a
 }
