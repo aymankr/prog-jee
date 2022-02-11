@@ -1,7 +1,6 @@
 package fr.iut.club;
-
 import fr.iut.Ball;
-import fr.iut.Club;
+
 import java.awt.geom.Point2D;
 /**
  * Simple putter club implementation.

@@ -4,5 +4,8 @@ package fr.iut;
 public enum Conditions {
     GREEN,
     FAIRWAY,
-    BUNKER
+    BUNKER;
+
+    public static class MainModule {
+    }
 }
