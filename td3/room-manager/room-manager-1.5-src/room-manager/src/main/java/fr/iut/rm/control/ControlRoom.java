@@ -53,15 +53,18 @@ public class ControlRoom {
     /**
      * Creates a room in DB
      *
-     * @param name the name of the room
+     * @param String[] args
      */
-    public void createRoom(final String name) {
+    public void createRoom(final String[] args) {
         unitOfWork.begin();
 
         // TODO check unicity
 
         Room room = new Room();
-        room.setName(name);
+        room.setName(args[0]);
+        if (args.length > 1 && args[1].length() <= 10) {
+            room.setDescription(args[1]);
+        }
         roomDao.saveOrUpdate(room);
         unitOfWork.end();
     }
