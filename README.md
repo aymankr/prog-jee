@@ -18,3 +18,4 @@
  - source .bashrc
  - $PATH
  - $JAVA_HOME
+.
