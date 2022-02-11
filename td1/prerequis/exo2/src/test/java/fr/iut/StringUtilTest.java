@@ -12,12 +12,14 @@ public class StringUtilTest {
         String res = StringUtil.prettyCurrencyPrint(21500.390, Locale.FRANCE);
         assertEquals(res.replace("\u00a0", " "), "21 500,39 €");
 
-<<<<<<< HEAD
         String res2 = StringUtil.prettyCurrencyPrint(8889.3900, Locale.FRANCE);
         assertEquals(res2.replace("\u00a0", " "), "8 889,39 €");
+<<<<<<< HEAD
 =======
         String res2 = StringUtil.prettyCurrencyPrint(328.81, Locale.FRANCE);
         assertEquals(res2.replace("\u00a0", " "), "328,81 €");
 >>>>>>> td1:tests success
+=======
+>>>>>>> creation projet golf
     }
 }
