@@ -53,15 +53,20 @@ public class ControlRoom {
     /**
      * Creates a room in DB
      *
-     * @param name the name of the room
+     * @param val the name of the room and the description
      */
-    public void createRoom(final String name) {
+    public void createRoom(final String[] val) {
         unitOfWork.begin();
 
         // TODO check unicity
 
         Room room = new Room();
-        room.setName(name);
+        room.setName(val[0]);
+        if (val.length>1) {
+            if (val[1].length() <= 10) {
+                room.setDescription(val[1]);
+            }
+        }
         roomDao.saveOrUpdate(room);
         unitOfWork.end();
     }

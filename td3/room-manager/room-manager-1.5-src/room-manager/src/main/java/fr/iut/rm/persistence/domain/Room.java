@@ -1,5 +1,7 @@
 package fr.iut.rm.persistence.domain;
 
+import jakarta.validation.constraints.Size;
+
 import javax.persistence.*;
 
 /**
@@ -20,6 +22,18 @@ public class Room {
      */
     @Column(nullable = false, unique = true)
     private String name;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Size(max=10)
+    @Column(length = 10)
+    private String description;
 
     /**
      * Default constructor (do nothing)
