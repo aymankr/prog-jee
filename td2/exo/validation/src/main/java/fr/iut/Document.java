@@ -1,13 +1,13 @@
 package fr.iut;
 
-import jakarta.validation.constraints.Min;
+
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.PastOrPresent;
 
 import java.util.Date;
 
 public class Document {
-
     @NotNull
     private String title;
 
@@ -36,6 +36,10 @@ public class Document {
         this.lastModification = lastModification;
     }
 
+    public void setCreator(Person creator) {
+        this.creator = creator;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -50,6 +54,7 @@ public class Document {
 
     public void setContent(String content) {
         Content = content;
+        return content;
     }
 
     public Date getCreationDate() {
@@ -59,6 +64,7 @@ public class Document {
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
+
 
     public Person getCreator() {
         return creator;
@@ -75,4 +81,7 @@ public class Document {
     public void setLastModifier(Person lastModifier) {
         this.lastModifier = lastModifier;
     }
-}
+
+    public Person getLastModifier() {
+        return lastModifier;
+    }
