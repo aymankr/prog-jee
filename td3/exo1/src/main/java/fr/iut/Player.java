@@ -1,5 +1,7 @@
 package fr.iut;
 
+import fr.iut.club.Club;
+
 /**
  * A Golf player has a ball and a Caddy.
  */

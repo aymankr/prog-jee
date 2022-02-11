@@ -1,4 +1,6 @@
-package fr.iut;
+package fr.iut.club;
+
+import fr.iut.Ball;
 
 /**
  * Abstraction for all golf club

@@ -1,13 +1,15 @@
 package fr.iut;
 
-/**
- * Basic implementation
- */
-public class App {
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
+public class App {
     public static void main(String[] args) {
-        Caddy caddy = new Caddy();
+        Injector injector = Guice.createInjector(new MainModuleExperimental());
+
+        Caddy caddy = injector.getInstance(Caddy.class);
         Player player = new Player("John", caddy);
+
         System.out.println(player);
         player.play(0.8, Math.PI / 2, Conditions.FAIRWAY);
         System.out.println(player);
