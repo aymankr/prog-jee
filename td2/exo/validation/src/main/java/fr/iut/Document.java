@@ -1,6 +1,10 @@
 package fr.iut;
 
+<<<<<<< HEAD
 import jakarta.validation.constraints.Min;
+=======
+
+>>>>>>> 009d885bf67acedb2a239c63add3986d5deeac91
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 
