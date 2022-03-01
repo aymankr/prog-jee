@@ -5,6 +5,7 @@ import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.persist.PersistService;
 import com.google.inject.persist.jpa.JpaPersistModule;
+import fr.iut.rm.control.ControlAccessEvent;
 import fr.iut.rm.control.ControlRoom;
 import org.apache.commons.cli.*;
 import org.slf4j.Logger;
@@ -29,9 +30,29 @@ public final class App {
      */
     private static final String CREATE = "c";
     /**
+     * delete constant
+     */
+    private static final String DELETE = "d";
+    /**
      * list constant
      */
     private static final String LIST = "l";
+    /**
+     * list constant
+     */
+    private static final String ENTER = "e";
+    /**
+     * list constant
+     */
+    private static final String EXIT = "x";
+    /**
+     * list constant
+     */
+    private static final String LISTE = "le";
+    /**
+     * list constant
+     */
+    private static final String FOLLOW = "f";
 
     /**
      * standard logger
@@ -45,13 +66,21 @@ public final class App {
     @Inject
      ControlRoom cr;
 
+    @Inject
+    ControlAccessEvent cae;
+
     /**
      * Invoked at module initialization time
      */
     public App() {
         // build options command line options
         options.addOption(OptionBuilder.withDescription("List all rooms").create(LIST));
-        options.addOption(OptionBuilder.hasArgs().withDescription("Create new room").create(CREATE));
+        options.addOption(OptionBuilder.hasArg().withArgName("person").withDescription("List all events").create(LISTE));
+        options.addOption(OptionBuilder.withDescription("List all events for a specific person").create(FOLLOW));
+        options.addOption(OptionBuilder.withArgName("name> <description").hasArgs(2).withDescription("Create new room").create(CREATE));
+        options.addOption(OptionBuilder.hasArg().withArgName("name").withDescription("Delete").create(DELETE));
+        options.addOption(OptionBuilder.hasArg().withArgName("person").withDescription("Enter").create(ENTER));
+        options.addOption(OptionBuilder.hasArg().withArgName("person").withDescription("Exit").create(EXIT));
         options.addOption(OptionBuilder.withDescription("Display help message").create(HELP));
         options.addOption(OptionBuilder.withDescription("Quit").create(QUIT));
     }
@@ -83,8 +112,22 @@ public final class App {
                     String val[]= cmd.getOptionValues(CREATE);
                     if (val[0] != null && !val[0].isEmpty()) {
                         cr.createRoom(val);
+                        }
+                    }else if (cmd.hasOption(DELETE)){
+                        String name = cmd.getOptionValue(DELETE);
+                        cr.deleteRoom(name);
+                    }else if (cmd.hasOption(EXIT)){
+                        String val[] = cmd.getOptionValues(EXIT);
+                        cae.exitRoom(val);
+                    }else if (cmd.hasOption(ENTER)){
+                        String val[]= cmd.getOptionValues(ENTER);
+                        cae.enterRoom(val);
+                    }else if (cmd.hasOption(LISTE)){
+                        cae.showEvents();
+                    }else if (cmd.hasOption(FOLLOW)){
+                        String person = cmd.getOptionValue(FOLLOW);
+                        cae.followEvents(person);
                     }
-                }
 
             } catch (ParseException e) {
                 e.printStackTrace();

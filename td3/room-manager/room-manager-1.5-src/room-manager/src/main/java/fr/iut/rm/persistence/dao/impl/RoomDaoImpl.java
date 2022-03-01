@@ -75,4 +75,15 @@ public class RoomDaoImpl implements RoomDao {
         return null;
     }
 
+    @Override
+    @Transactional
+    public void delete(final String name) {
+        StringBuilder query = new StringBuilder("delete from ");
+        query.append(Room.class.getName()).append(" as room");
+        query.append(" where room.").append(Room_.name.getName()).append(" = :name" );
+
+        em.get().createQuery(query.toString()).setParameter("name", name).executeUpdate();
+
+    }
+
 }

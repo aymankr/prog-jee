@@ -28,4 +28,11 @@ public interface RoomDao {
      */
     Room findByName(final String name);
 
+    /**
+     * @param room object to remove from DB
+     */
+    void delete(final String name);
+
+
+
 }

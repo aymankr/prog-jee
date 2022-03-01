@@ -23,14 +23,9 @@ public class Room {
     @Column(nullable = false, unique = true)
     private String name;
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    /**
+     * Room's description
+     */
     @Size(max=10)
     @Column(length = 10)
     private String description = "";
@@ -41,6 +36,7 @@ public class Room {
     public Room() {
         // do nothing
     }
+
 
     /**
      * anemic getter
@@ -76,6 +72,14 @@ public class Room {
      */
     public void setName(final String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

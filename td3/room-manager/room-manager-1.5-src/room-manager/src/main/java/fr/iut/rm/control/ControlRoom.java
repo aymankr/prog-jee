@@ -58,25 +58,33 @@ public class ControlRoom {
     public void createRoom(final String[] val) {
         unitOfWork.begin();
 
-        List<Room> rooms = roomDao.findAll();
+        if (roomDao.findByName(val[0])==null) {
+            Room room = new Room();
+            room.setName(val[0]);
+            if (val.length > 1)
+                if (val[1].length() <= 10)
+                    room.setDescription(val[1]);
 
-        for (Room room : rooms ){
-            if ( room.getName().equals(val[0]))
-            {
-                System.out.println("Creation impossible this room already exist" + room.getName() + "   " + val[0] );
-                unitOfWork.end();
-                return;
-            }
+            roomDao.saveOrUpdate(room);
         }
-        Room room = new Room();
-        room.setName(val[0]);
-        if (val.length>1) {
-            if (val[1].length() <= 10) {
-                room.setDescription(val[1]);
-            }
-        }
-        roomDao.saveOrUpdate(room);
         unitOfWork.end();
     }
 
+    public void deleteRoom(final String name){
+        unitOfWork.begin();
+
+        Room room = roomDao.findByName(name);
+        if (room!=null){
+            roomDao.delete(name);
+        }else{
+            System.out.println("Salle non existente: "+ name);
+        }
+        unitOfWork.end();
+    }
+
+    public void exitRoom(String[] val) {
+    }
+
+    public void enterRoom(String[] val) {
+    }
 }
