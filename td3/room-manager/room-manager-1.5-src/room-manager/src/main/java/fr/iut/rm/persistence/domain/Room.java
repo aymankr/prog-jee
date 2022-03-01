@@ -33,7 +33,7 @@ public class Room {
 
     @Size(max=10)
     @Column(length = 10)
-    private String description;
+    private String description = "";
 
     /**
      * Default constructor (do nothing)

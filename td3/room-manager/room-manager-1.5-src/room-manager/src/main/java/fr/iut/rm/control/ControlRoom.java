@@ -43,7 +43,7 @@ public class ControlRoom {
             System.out.println("Rooms :");
             System.out.println("--------");
             for (Room room : rooms) {
-                System.out.println(String.format("   [%d], name '%s'", room.getId(), room.getName()));
+                System.out.println(String.format("   [%d], name: '%s'   description: '%s'", room.getId(), room.getName(),room.getDescription()));
             }
         }
 
@@ -58,8 +58,16 @@ public class ControlRoom {
     public void createRoom(final String[] val) {
         unitOfWork.begin();
 
-        // TODO check unicity
+        List<Room> rooms = roomDao.findAll();
 
+        for (Room room : rooms ){
+            if ( room.getName().equals(val[0]))
+            {
+                System.out.println("Creation impossible this room already exist" + room.getName() + "   " + val[0] );
+                unitOfWork.end();
+                return;
+            }
+        }
         Room room = new Room();
         room.setName(val[0]);
         if (val.length>1) {
