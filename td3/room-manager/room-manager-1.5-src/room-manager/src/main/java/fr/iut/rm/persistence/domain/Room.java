@@ -1,7 +1,7 @@
 package fr.iut.rm.persistence.domain;
 
 import jakarta.validation.constraints.Size;
-import jdk.jfr.Description;
+
 import org.checkerframework.checker.units.qual.Length;
 
 import javax.persistence.*;
