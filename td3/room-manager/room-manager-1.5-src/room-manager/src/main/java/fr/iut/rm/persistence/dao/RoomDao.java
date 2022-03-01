@@ -15,6 +15,10 @@ public interface RoomDao {
      * @param room object to persist
      */
     void saveOrUpdate(Room room);
+    /**
+     * @param room object to remove from DB
+     */
+    void deleteRoom(final String name);
 
     /**
      * @return the full room list

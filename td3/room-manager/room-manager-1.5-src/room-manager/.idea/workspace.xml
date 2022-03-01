@@ -5,13 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22e75b7e-4ae0-4d6e-8caa-d9adc54f72da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlAccessEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/AccessEventDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/AccessEventDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/AccessEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room-manager.h2.db" beforeDir="false" afterPath="$PROJECT_DIR$/room-manager.h2.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/RoomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/RoomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/RoomDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/MainModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/MainModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/control/ControlRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/control/ControlRoom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/dao/RoomDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/dao/RoomDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/dao/impl/RoomDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/dao/impl/RoomDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/domain/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/domain/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/domain/Room_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/iut/rm/persistence/domain/Room_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/PersistenceStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/PersistenceStarter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/RoomDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/RoomDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/guice/AbstractDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/guice/AbstractDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/guice/TestModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/iut/rm/dao/guice/TestModule.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -40,6 +68,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
@@ -73,5 +102,17 @@
       <updated>1646147736003</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

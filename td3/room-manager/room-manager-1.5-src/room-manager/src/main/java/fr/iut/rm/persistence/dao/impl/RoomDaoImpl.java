@@ -63,9 +63,12 @@ public class RoomDaoImpl implements RoomDao {
     public Room findByName(final String name) {
         StringBuilder query = new StringBuilder("from ");
         query.append(Room.class.getName()).append(" as room");
-        query.append(" where room.").append(Room_.name.getName()).append(" = :name");
+        query.append(" where room.").append(Room_.name.getName());
+        query.append(" = :name");
 
-        List<Room> resultList = em.get().createQuery(query.toString()).setParameter("name", name).getResultList();
+        List<Room> resultList = em.get().createQuery(query.toString()).
+                setParameter("name", name).
+                getResultList();
 
         if (resultList.size() > 0) {
             logger.debug("Room  with name '{}' found", name);
@@ -75,4 +78,20 @@ public class RoomDaoImpl implements RoomDao {
         return null;
     }
 
+    @Override
+    @Transactional
+    public void deleteRoom(final String name) {
+        StringBuilder query = new StringBuilder("delete from ");
+        query.append(Room.class.getName()).append(" as room");
+        query.append(" where room.").append(Room_.name.getName());
+        query.append(" = :name");
+
+        int s = em.get().createQuery(query.toString()).
+                setParameter("name", name).executeUpdate();
+
+        if (s<0) {
+            logger.debug("Room  with name '{}' will be removed", name);
+        }
+        logger.debug("No room with name '{}' found", name);
+    }
 }

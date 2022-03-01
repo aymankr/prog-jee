@@ -5,6 +5,7 @@ import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.persist.PersistService;
 import com.google.inject.persist.jpa.JpaPersistModule;
+import fr.iut.rm.control.ControlAccessEvent;
 import fr.iut.rm.control.ControlRoom;
 import org.apache.commons.cli.*;
 import org.slf4j.Logger;
@@ -28,10 +29,15 @@ public final class App {
      * creat constant
      */
     private static final String CREATE = "c";
+    private static final String DELETE = "d";
+    private static final String ENTER = "e";
+    private static final String EXIT = "x";
     /**
      * list constant
      */
     private static final String LIST = "l";
+    private static final String LIST2 = "l2";
+    private static final String FOLLOW = "f";
 
     /**
      * standard logger
@@ -45,13 +51,20 @@ public final class App {
     @Inject
      ControlRoom cr;
 
+    @Inject
+    ControlAccessEvent cae;
     /**
      * Invoked at module initialization time
      */
     public App() {
         // build options command line options
         options.addOption(OptionBuilder.withDescription("List all rooms").create(LIST));
+        options.addOption(OptionBuilder.withDescription("List all access events").create(LIST2));
         options.addOption(OptionBuilder.hasArgs(2).withDescription("Create new room").create(CREATE));
+        options.addOption(OptionBuilder.hasArg().withDescription("Delete a room").create(DELETE));
+        options.addOption(OptionBuilder.hasArg().withDescription("Enter in a room").create(ENTER));
+        options.addOption(OptionBuilder.hasArg().withArgName("person").withDescription("Follow a person").create(FOLLOW));
+        options.addOption(OptionBuilder.hasArg().withDescription("Exit in a room").create(EXIT));
         options.addOption(OptionBuilder.withDescription("Display help message").create(HELP));
         options.addOption(OptionBuilder.withDescription("Quit").create(QUIT));
     }
@@ -84,7 +97,26 @@ public final class App {
                         cr.createRoom(val);
                     }
                 }
-
+                else if (cmd.hasOption(DELETE)) {
+                    String val = cmd.getOptionValue(DELETE);
+                    cr.deleteRoom(val);
+                }
+                else if (cmd.hasOption(ENTER)) {
+                    String val[] = cmd.getOptionValues(ENTER);
+                    cae.addEntry(val);
+                }
+                else if (cmd.hasOption(EXIT)) {
+                    String val[] = cmd.getOptionValues(EXIT);
+                    cae.removeExit(val);
+                }
+                else if (cmd.hasOption(LIST2)) {
+                    String val[] = cmd.getOptionValues(EXIT);
+                    cae.removeExit(val);
+                }
+                else if (cmd.hasOption(FOLLOW)) {
+                    String val[] = cmd.getOptionValues(EXIT);
+                    cae.removeExit(val);
+                }
             } catch (ParseException e) {
                 e.printStackTrace();
                 showHelp();

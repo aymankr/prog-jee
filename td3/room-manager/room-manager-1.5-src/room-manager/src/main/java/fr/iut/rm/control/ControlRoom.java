@@ -58,15 +58,25 @@ public class ControlRoom {
     public void createRoom(final String[] args) {
         unitOfWork.begin();
 
-        // TODO check unicity
+        if (roomDao.findByName(args[0]) == null) {
+            Room room = new Room();
+            room.setName(args[0]);
+            if (args.length > 1 && args[1].length() <= 10) {
+                room.setDescription(args[1]);
+            }
+            roomDao.saveOrUpdate(room);
+        }
+        unitOfWork.end();
+    }
 
-        Room room = new Room();
-        room.setName(args[0]);
-        if (args.length > 1 && args[1].length() <= 10) {
-            room.setDescription(args[1]);
+    public void deleteRoom(final String name) {
+        unitOfWork.begin();
+
+        Room room = roomDao.findByName(name);
+        if (room!=null) {
+            roomDao.deleteRoom(name);
         }
         roomDao.saveOrUpdate(room);
         unitOfWork.end();
     }
-
 }
