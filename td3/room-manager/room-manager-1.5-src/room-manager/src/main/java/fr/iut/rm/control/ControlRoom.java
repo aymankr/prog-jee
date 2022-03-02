@@ -81,10 +81,4 @@ public class ControlRoom {
         }
         unitOfWork.end();
     }
-
-    public void exitRoom(String[] val) {
-    }
-
-    public void enterRoom(String[] val) {
-    }
 }

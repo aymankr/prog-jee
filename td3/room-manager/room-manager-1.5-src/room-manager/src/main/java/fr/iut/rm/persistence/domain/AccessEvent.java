@@ -21,7 +21,6 @@ public class AccessEvent {
     /**
      * Event's Room
      */
-    @Column(nullable = false)
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
@@ -34,6 +33,7 @@ public class AccessEvent {
     /**
      * Date the event
      */
+    @GeneratedValue
     private Date date;
 
     /**
@@ -45,10 +45,6 @@ public class AccessEvent {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public Room getRoom() {
         return room;
     }
@@ -57,7 +53,7 @@ public class AccessEvent {
         this.room = room;
     }
 
-    public boolean isEvent() {
+    public boolean getEvent() {
         return event;
     }
 
@@ -80,4 +76,5 @@ public class AccessEvent {
     public void setPersonName(String personName) {
         this.personName = personName;
     }
+
 }

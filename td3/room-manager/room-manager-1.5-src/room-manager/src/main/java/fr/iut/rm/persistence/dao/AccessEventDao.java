@@ -7,11 +7,9 @@ import java.util.List;
 
 public interface AccessEventDao {
 
-    void addEntry(Room room, String name);
-
-    void addExit(Room room, String name);
-
     List<AccessEvent> findAll();
 
-    List<AccessEvent> findPersonsEvents(String name);
+    List<AccessEvent> findByPerson(String name);
+
+    void saveOrUpdate(final AccessEvent ae);
 }
