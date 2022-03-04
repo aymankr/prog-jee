@@ -1,7 +1,6 @@
 package fr.iut.rm.persistence.domain;
 
 import jakarta.validation.constraints.Size;
-import org.checkerframework.checker.units.qual.Length;
 
 import javax.persistence.*;
 
@@ -18,10 +17,6 @@ public class Room {
     @GeneratedValue
     private long id;
 
-    @Size(max=10)
-    @Column(length=10)
-    private String description;
-
     /**
      * Room's name
      */
@@ -29,11 +24,19 @@ public class Room {
     private String name;
 
     /**
+     * Room's description
+     */
+    @Size(max=10)
+    @Column(length = 10)
+    private String description = "";
+
+    /**
      * Default constructor (do nothing)
      */
     public Room() {
         // do nothing
     }
+
 
     /**
      * anemic getter
@@ -71,7 +74,12 @@ public class Room {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

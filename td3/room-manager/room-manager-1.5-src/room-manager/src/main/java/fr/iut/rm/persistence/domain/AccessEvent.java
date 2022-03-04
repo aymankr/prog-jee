@@ -1,50 +1,59 @@
 package fr.iut.rm.persistence.domain;
 
 import jakarta.validation.constraints.Size;
-import jdk.jfr.Name;
-import org.checkerframework.checker.units.qual.Length;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Date;
 
 /**
- * A classic room
+ * A classic Event
  */
 @Entity
-@Table(name = "accessevent")
+@Table(name = "accessEvent")
 public class AccessEvent {
-
+    /**
+     * sequence generated id
+     */
     @Id
     @GeneratedValue
     private long id;
-    private String name;
-    private boolean event;
 
+    /**
+     * Event's Room
+     */
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
 
-    public Room getRoom() {
-        return room;
-    }
+    /**
+     * Event desciption true for entrance, false for exit
+     */
+    private boolean event;
+
+    /**
+     * Date the event
+     */
+    @GeneratedValue
+    private Date date;
+
+    /**
+     * Name of the persone creating the event
+     */
+    private String personName;
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public Room getRoom() {
+        return room;
     }
 
-    public String getName() {
-        return name;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isEvent() {
+    public boolean getEvent() {
         return event;
     }
 
@@ -52,14 +61,20 @@ public class AccessEvent {
         this.event = event;
     }
 
-    public void setRoom(Room room) {
-        this.room = room;
+    public Date getDate() {
+        return date;
     }
 
-    /**
-     * Default constructor (do nothing)
-     */
-    public AccessEvent() {
-
+    public void setDate(Date date) {
+        this.date = date;
     }
+
+    public String getPersonName() {
+        return personName;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
+
 }

@@ -15,10 +15,6 @@ public interface RoomDao {
      * @param room object to persist
      */
     void saveOrUpdate(Room room);
-    /**
-     * @param room object to remove from DB
-     */
-    void deleteRoom(final String name);
 
     /**
      * @return the full room list
@@ -31,5 +27,12 @@ public interface RoomDao {
      * @return the room or null if nothing found
      */
     Room findByName(final String name);
+
+    /**
+     * @param room object to remove from DB
+     */
+    void delete(final String name);
+
+
 
 }

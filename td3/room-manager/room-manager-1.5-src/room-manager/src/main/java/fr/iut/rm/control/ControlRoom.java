@@ -30,7 +30,7 @@ public class ControlRoom {
     @Inject
     RoomDao roomDao;
 
-     /*
+    /*
      * * Displays all the rooms content in DB
      */
     public void showRooms() {
@@ -43,7 +43,7 @@ public class ControlRoom {
             System.out.println("Rooms :");
             System.out.println("--------");
             for (Room room : rooms) {
-                System.out.println(String.format("   [%d], name '%s'", room.getId(), room.getName()));
+                System.out.println(String.format("   [%d], name: '%s'   description: '%s'", room.getId(), room.getName(),room.getDescription()));
             }
         }
 
@@ -53,30 +53,32 @@ public class ControlRoom {
     /**
      * Creates a room in DB
      *
-     * @param String[] args
+     * @param val the name of the room and the description
      */
-    public void createRoom(final String[] args) {
+    public void createRoom(final String[] val) {
         unitOfWork.begin();
 
-        if (roomDao.findByName(args[0]) == null) {
+        if (roomDao.findByName(val[0])==null) {
             Room room = new Room();
-            room.setName(args[0]);
-            if (args.length > 1 && args[1].length() <= 10) {
-                room.setDescription(args[1]);
-            }
+            room.setName(val[0]);
+            if (val.length > 1)
+                if (val[1].length() <= 10)
+                    room.setDescription(val[1]);
+
             roomDao.saveOrUpdate(room);
         }
         unitOfWork.end();
     }
 
-    public void deleteRoom(final String name) {
+    public void deleteRoom(final String name){
         unitOfWork.begin();
 
         Room room = roomDao.findByName(name);
-        if (room!=null) {
-            roomDao.deleteRoom(name);
+        if (room!=null){
+            roomDao.delete(name);
+        }else{
+            System.out.println("Salle non existente: "+ name);
         }
-        roomDao.saveOrUpdate(room);
         unitOfWork.end();
     }
 }
