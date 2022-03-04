@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22e75b7e-4ae0-4d6e-8caa-d9adc54f72da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/MainModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/MainModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlAccessEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlAccessEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/control/ControlRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/AccessEventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/AccessEventDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/RoomDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/AccessEventDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/AccessEventDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/RoomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/dao/impl/RoomDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/AccessEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/AccessEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/iut/rm/persistence/domain/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
