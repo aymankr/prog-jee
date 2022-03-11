@@ -31,6 +31,11 @@
       <scope>provided</scope>
       <!-- pour compilation / non inclu dans l'archive générée -->
     </dependency>
+    <dependency>
+      <groupId>com.google.inject.extensions</groupId>
+      <artifactId>guice-servlet</artifactId>
+      <version>5.0.1</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>helloServlet</finalName>
