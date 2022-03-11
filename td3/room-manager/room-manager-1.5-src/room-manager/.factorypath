@@ -31,8 +31,5 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/com/h2database/h2/1.3.160/h2-1.3.160.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/commons-cli/commons-cli/1.2/commons-cli-1.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/javax/el/javax.el-api/2.2.4/javax.el-api-2.2.4.jar" enabled="true" runInBatchMode="false"/>
-<<<<<<< HEAD
-=======
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/validation/jakarta.validation-api/3.0.0/jakarta.validation-api-3.0.0.jar" enabled="true" runInBatchMode="false"/>
->>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
 </factorypath>

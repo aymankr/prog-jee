@@ -1,8 +1,4 @@
 package fr.iut.club;
-<<<<<<< HEAD
-=======
-
->>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
 import fr.iut.Ball;
 
 import java.awt.geom.Point2D;

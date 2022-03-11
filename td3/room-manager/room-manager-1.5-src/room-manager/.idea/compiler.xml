@@ -9,5 +9,8 @@
         <module name="room-manager" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="room-manager" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

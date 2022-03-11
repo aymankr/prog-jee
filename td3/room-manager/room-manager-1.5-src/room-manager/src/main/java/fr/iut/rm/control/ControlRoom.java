@@ -30,11 +30,7 @@ public class ControlRoom {
     @Inject
     RoomDao roomDao;
 
-<<<<<<< HEAD
      /*
-=======
-    /*
->>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
      * * Displays all the rooms content in DB
      */
     public void showRooms() {

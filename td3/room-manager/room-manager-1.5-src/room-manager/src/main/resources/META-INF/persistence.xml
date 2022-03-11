@@ -14,10 +14,6 @@
         <properties>
             <property name="hibernate.hbm2ddl.auto"
                       value="update"/>
-<<<<<<< HEAD
-
-=======
->>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
             <property name="hibernate.showSql"
                       value="true"/>
 
@@ -32,8 +28,4 @@
         </properties>
     </persistence-unit>
 
-<<<<<<< HEAD
 </persistence>
-=======
-</persistence>
->>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092

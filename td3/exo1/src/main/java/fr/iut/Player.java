@@ -1,10 +1,6 @@
 package fr.iut;
 
-<<<<<<< HEAD
 import fr.iut.club.*;
-=======
-import fr.iut.club.Club;
->>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
 
 /**
  * A Golf player has a ball and a Caddy.
