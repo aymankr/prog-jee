@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -35,6 +36,12 @@ public class RoomServlet extends HttpServlet {
 
         Map<String, Object> root = new HashMap<String, Object>();
         // navigation data and links
+        ArrayList<Room> room = new ArrayList<>();
+        for (int i = 0; i<10;i++) {
+            Room r = new Room(("r" + i), i*10, i*5);
+            room.add((r));
+        }
+        root.put("fakeRooms", room);
         root.put("title", "freemarker Servlet");
         root.put("now",
                 SimpleDateFormat.getDateTimeInstance().format(new Date()));
