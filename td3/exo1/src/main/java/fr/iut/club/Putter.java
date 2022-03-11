@@ -17,5 +17,8 @@ public class Putter implements Club {
         x += (force * DISTANCE_MAX) * Math.sin(direction);
         y += (force * DISTANCE_MAX) * Math.cos(direction);
         ball.setPosition(new Point2D.Double(x, y));  }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
 }

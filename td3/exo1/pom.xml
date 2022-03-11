@@ -36,11 +36,14 @@
     
         <!-- Testing dependencies-->
         <dependency>
+<<<<<<< HEAD
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
             <version>5.0.1</version>
         </dependency>
         <dependency>
+=======
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit}</version>
@@ -58,6 +61,19 @@
             <version>${junit}</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
+=======
+        <dependency>
+            <groupId>org.sonatype.sisu</groupId>
+            <artifactId>sisu-guice</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
     </dependencies>
     
     <build>

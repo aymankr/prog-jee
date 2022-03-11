@@ -32,4 +32,8 @@ public class Caddy {
                 return putter;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092

@@ -18,4 +18,8 @@ public class Ball {
     public void setPosition(final Point2D position) {
         this.position.setLocation(position);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092

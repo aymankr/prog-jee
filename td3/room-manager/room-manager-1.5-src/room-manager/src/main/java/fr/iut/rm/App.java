@@ -64,7 +64,11 @@ public final class App {
     private final Options options = new Options();
 
     @Inject
+<<<<<<< HEAD
      ControlRoom cr;
+=======
+    ControlRoom cr;
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
 
     @Inject
     ControlAccessEvent cae;
@@ -112,6 +116,7 @@ public final class App {
                     String val[]= cmd.getOptionValues(CREATE);
                     if (val[0] != null && !val[0].isEmpty())
                         cr.createRoom(val);
+<<<<<<< HEAD
                     }else if (cmd.hasOption(DELETE)){
                         String name = cmd.getOptionValue(DELETE);
                         cr.deleteRoom(name);
@@ -127,6 +132,23 @@ public final class App {
                         String person = cmd.getOptionValue(FOLLOW);
                         cae.followEvents(person);
                     }
+=======
+                }else if (cmd.hasOption(DELETE)){
+                    String name = cmd.getOptionValue(DELETE);
+                    cr.deleteRoom(name);
+                }else if (cmd.hasOption(EXIT)){
+                    String val[] = cmd.getOptionValues(EXIT);
+                    cae.createAccessEvent(val,false);
+                }else if (cmd.hasOption(ENTER)){
+                    String val[]= cmd.getOptionValues(ENTER);
+                    cae.createAccessEvent(val,true);
+                }else if (cmd.hasOption(LISTE)){
+                    cae.showEvents();
+                }else if (cmd.hasOption(FOLLOW)){
+                    String person = cmd.getOptionValue(FOLLOW);
+                    cae.followEvents(person);
+                }
+>>>>>>> 9525667439a0e99c0b6ed0393cac56604eb7d092
 
             } catch (ParseException e) {
                 e.printStackTrace();
