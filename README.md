@@ -52,3 +52,11 @@
  - JSE (Java Server Edition) --> donne un .war a placer dans un serveur web (tomcat) pour lancer l'appli
  - Servlet .java (controller mvc) --> reçoit requette http/renvoie une répose http (POST/GET)
  - JSP .jsp (Java Server Page) (vues mvc)--> code HTML avec du code java dedans
+
+ - API (Applicaction Programming Interface)
+ - REST (REpresentational State Transfer)
+ - URI  (Uniform Resource Identifier)
+ - Verbe HTTP
+ - Entete HTTP
+ - Paramètres de requetes
+ - Réponses HTTP
